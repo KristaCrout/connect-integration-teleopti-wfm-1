@@ -85,6 +85,7 @@ function internalNewS3Object(event, context) {
 	                    objIsCSV = false;
 	                    console.log(msg);
 	                }
+	                else {objIsCSV = true;}
 	                
 	                if (!objIsCSV){
 	                	bodydata = json2csv.jsonconvert(objectData.Body.toString("utf8"));
